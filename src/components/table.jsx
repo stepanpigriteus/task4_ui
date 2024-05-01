@@ -11,7 +11,7 @@ export default function UserTable() {
   const [selectedRows, setSelectedRows] = useState([]);
   const [count, setCount] = useState(0);
   const fetchUserData = () => {
-    fetch('https://testt-1.onrender.com/home', {
+    fetch('https://testt-zumv.onrender.com/home', {
       method: 'GET',
     })
       .then(response => response.json())

@@ -13,7 +13,7 @@ export default function UserFormRegister() {
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
             let formValue = JSON.stringify(values);
-            fetch('https://testt-1.onrender.com/register_form', {
+            fetch('https://testt-zumv.onrender.com/register_form', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'

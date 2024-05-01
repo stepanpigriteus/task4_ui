@@ -4,7 +4,7 @@ export function handleClick(e, find) {
   e.preventDefault();
   let id = JSON.stringify(getCheckedId());
   let method = e.target.id === 'delete' ? 'DELETE': 'POST';
-  fetch(`https://testt-1.onrender.com/${e.target.id}`, {
+  fetch(`https://testt-zumv.onrender.com/${e.target.id}`, {
       method: method,
       headers: {
           'Content-Type': 'application/json'
