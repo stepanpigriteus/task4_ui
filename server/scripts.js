@@ -1,29 +1,29 @@
 
 
 export function handleClick(e, find) {
-    e.preventDefault();
-    let id = JSON.stringify(getCheckedId());
-    let method = e.target.id === 'delete' ? 'DELETE': 'POST';
-    fetch(`https://testt-1.onrender.com/${e.target.id}`, {
-        method: method,
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: id
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-    console.log(find)
-    if (e.target.id === "block"|| e.target.id === 'delete') {
-      if (find === true) {
-        // handleLogout()
+  e.preventDefault();
+  let id = JSON.stringify(getCheckedId());
+  let method = e.target.id === 'delete' ? 'DELETE': 'POST';
+  fetch(`https://testt-1.onrender.com/${e.target.id}`, {
+      method: method,
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: id
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log('Success:', data);
+      if (e.target.id === "block" || e.target.id === 'delete') {
+          if (find === true) {
+              handleLogout();
+          }
       }
-    }
+  })
+  .catch((error) => {
+      console.error('Error:', error);
+  });
+  console.log(find)
 }
 
   function getCheckedId() {
