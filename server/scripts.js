@@ -8,7 +8,7 @@ export function handleClick(e, find) {
       method: method,
       headers: {
           'Content-Type': 'application/json'
-      },
+      }, 
       body: id
   })
   .then(response => response.json())
