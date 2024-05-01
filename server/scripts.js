@@ -18,11 +18,10 @@ export function handleClick(e, find) {
     .catch((error) => {
         console.error('Error:', error);
     });
-
+    console.log(find)
     if (e.target.id === "block"|| e.target.id === 'delete') {
       if (find === true) {
         handleLogout()
-      
       }
     }
 }

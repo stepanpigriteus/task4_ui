@@ -15,7 +15,6 @@ export default  function App()  {
         const token = localStorage.getItem('jwt_token');
         const tokenId = localStorage.getItem('id');
         if (token) {
-            console.log('токен есть',tokenId )
             setIsAuthenticated(true);
         }
     }, []);
