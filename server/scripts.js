@@ -21,7 +21,7 @@ export function handleClick(e, find) {
     console.log(find)
     if (e.target.id === "block"|| e.target.id === 'delete') {
       if (find === true) {
-        handleLogout()
+        // handleLogout()
       }
     }
 }
